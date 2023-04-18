@@ -7,6 +7,7 @@ const conexao = require('./src/database')
 const Paciente = require('./src/models/paciente');
 const Medico = require('./src/models/medico');
 const Enfermeiro = require('./src/models/enfermeiro');
+const atendimento = require('./src/models/atendimento');
 
 
 //instancia express como objeto
