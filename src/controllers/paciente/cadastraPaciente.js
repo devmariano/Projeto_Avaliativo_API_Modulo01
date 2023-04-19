@@ -22,14 +22,20 @@ async function cadastraPaciente(request, response) {
         })
 
         if(pacienteExiste) 
-            return response.status(409).json({message: "Paciente já cadastrado"})
+            return response
+            .status(409)
+            .json({message: "Paciente já cadastrado"})
         
         const novoPaciente = await Paciente.create(dadosPaciente)
-        return response.status(201).json(novoPaciente)
+            return response
+            .status(201)
+            .json(novoPaciente)
 
     } catch (error) {
-        console.error('Requisição não processada', error.message)
-        response.status(400).json({message: "Requisição não processada"})
+        console.error('Não foi possível processar a requisição', error.message)
+            response
+            .status(400)
+            .json({message: "Não foi possível processar a requisição"})
     }
 }
 

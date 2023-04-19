@@ -18,7 +18,11 @@ const cadastraEnfermeiro = require('./src/controllers/enfermeiro/cadastraEnferme
 const validaPaciente = require("./src/middlewares/validaPaciente");
 const validaMedico = require("./src/middlewares/validaMedico");
 const validaEnfermeiro = require("./src/middlewares/validaEnfermeiro");
-
+const excluiPaciente = require("./src/controllers/paciente/excluiPaciente");
+const listaPaciente = require("./src/controllers/paciente/listaPaciente");
+const listaTodosPacientes = require("./src/controllers/paciente/listaTodosPacientes");
+const atualizaPaciente = require("./src/controllers/paciente/atualizaPaciente");
+const atualizaStatusPaciente = require("./src/controllers/paciente/atualizaStatusPaciente");
 
 //instancia express como objeto
 const app = express()
@@ -27,6 +31,11 @@ app.use(express.json())
 
 //ROTAS PACIENTES
 app.post('/api/pacientes', validaPaciente, cadastraPaciente)
+app.delete('/api/pacientes/:id', excluiPaciente)
+app.get('/api/pacientes/:id', listaPaciente)
+app.get('/api/pacientes/', listaTodosPacientes)
+app.put('/api/pacientes/:id', atualizaPaciente)
+app.put('/api/pacientes/:id/status', atualizaStatusPaciente)
 
 //ROTAS MEDICOS
 app.post('/api/medicos', validaMedico, cadastraMedico)
