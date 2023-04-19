@@ -1,5 +1,7 @@
-const { Sequelize } = require('sequelize');
-const conexao = require('../database');
+const { Sequelize } = require('sequelize')
+const conexao = require('../database')
+const Medico = require('./medico')
+const Paciente = require('./paciente')
 
 const Atendimento = conexao.define('atendimento', {
   id: {
@@ -16,6 +18,11 @@ const Atendimento = conexao.define('atendimento', {
     allowNull: false,
   },
 });
+
+//cria o relacionamento entre as tabelas
+Atendimento.belongsTo(Paciente)
+Atendimento.belongsTo(Medico)
+
 
 Atendimento.afterCreate(async (atendimento) => {
   // Incrementa o total de atendimentos do paciente

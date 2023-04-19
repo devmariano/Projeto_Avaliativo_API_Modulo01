@@ -9,18 +9,25 @@ const Medico = require('./src/models/medico');
 const Enfermeiro = require('./src/models/enfermeiro');
 const atendimento = require('./src/models/atendimento');
 
+//rotas
+const cadastraPaciente = require('./src/controllers/paciente/cadastraPaciente');
+const validaPaciente = require("./src/middlewares/validaPaciente");
+
 
 //instancia express como objeto
 const app = express()
 //obrigatório pois será utilizado json nas requisições
 app.use(express.json()) 
 
+app.post('/api/pacientes', validaPaciente, cadastraPaciente)
+
+
 
 //verifica se conexao obteve sucesso e sincroniza os models ao BD
 conexao.authenticate();
 conexao.sync({alter: true})
 
-//inicializa/sobe api na porta 5656
+//inicializa/sobe api na porta 5151
 app.listen(process.env.PORT_API, () => {
     console.log("::API LABMedicine online::")
 })
