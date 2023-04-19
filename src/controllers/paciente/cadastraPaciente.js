@@ -28,8 +28,8 @@ async function cadastraPaciente(request, response) {
         return response.status(201).json(novoPaciente)
 
     } catch (error) {
-        console.error('Erro: Requisição não processada', error.message)
-        response.status(500).json({message: "Erro: Requisição não processada"})
+        console.error('Requisição não processada', error.message)
+        response.status(400).json({message: "Requisição não processada"})
     }
 }
 

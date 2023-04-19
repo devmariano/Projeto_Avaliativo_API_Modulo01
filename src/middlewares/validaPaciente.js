@@ -70,7 +70,7 @@ const validacao = yup.object().shape({
 })
 
 function validaPaciente(request, response, next) {
-console.log("dado original", request.body)
+//console.log("dado original", request.body)
 //quando o validade sync encontra alguam inconsistencia ele lança uma excessão pr isso utilizar dentro do try 
 //console.log(validacao.validateSync(request.body))
 try {
