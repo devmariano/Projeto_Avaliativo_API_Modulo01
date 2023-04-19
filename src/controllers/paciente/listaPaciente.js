@@ -5,16 +5,16 @@ async function listaPaciente(request, response) {
         const paciente_id = await Paciente.findByPk(request.params.id)
 
         if(!paciente_id) return response
-        .status(404) //not found
+        .status(404) 
         .json({message: "Paciente não encontrado"})
 
         return response
-        .status(200) //ok
+        .status(200) 
         .json(paciente_id)
 
     } catch (error) {
         return response
-        .status(500) //bad request
+        .status(500) 
         .json({message: "Não foi possível processar a requisição"})
     }
 }

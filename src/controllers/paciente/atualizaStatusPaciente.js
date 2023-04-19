@@ -2,7 +2,7 @@ const Paciente = require('../../models/paciente');
 
 async function atualizaStatusPaciente(request, response) {
     try {
-        const id = request.params.id // pegando o id enviado
+        const id = request.params.id 
         const paciente = await Paciente.findByPk(id)
 
         if (![

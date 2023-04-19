@@ -13,7 +13,6 @@ async function excluiPaciente(request, response) {
 
     await paciente.destroy();
 
-    //sem necessidade de response body
     return response
       .status(204)
       .json();

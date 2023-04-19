@@ -21,27 +21,17 @@ async function listaPaciente(request, response) {
             ) 
             response
             .status(200)
-            .json(pacientes) // retorna todos pacientes buscados
+            .json(pacientes) 
         } else {
             const pacientes = await Paciente.findAll() 
             response
             .status(200)
-            .json(pacientes) // retorna todos pacientes sem filtro
+            .json(pacientes) 
         }
-        /*codigo antigo
-        const pacientes = await Paciente.findAll()
 
-        if(!pacientes) return response
-        .status(404) //not found
-        .json({message: "Lista de pacientes sem dados"})
-
-        return response
-        .status(200) //ok
-        .json(pacientes)
-*/
     } catch (error) {
         return response
-        .status(500) //bad request
+        .status(500) 
         .json({message: "Não foi possível processar a requisição"})
     }
 }
