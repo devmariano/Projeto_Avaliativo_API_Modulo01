@@ -34,7 +34,7 @@ async function cadastraPaciente(request, response) {
     } catch (error) {
         console.error('Não foi possível processar a requisição', error.message)
             response
-            .status(400)
+            .status(500)
             .json({message: "Não foi possível processar a requisição"})
     }
 }

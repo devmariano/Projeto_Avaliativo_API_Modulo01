@@ -24,8 +24,8 @@ async function cadastraEnfermeiro(request, response) {
         return response.status(201).json(novoEnfermeiro)
 
     } catch (error) {
-        console.error('Requisição não processada', error.message)
-        response.status(400).json({message: "Requisição não processada"})
+        console.error('Não foi possível processar a requisição', error.message)
+        response.status(500).json({message: "Não foi possível processar a requisição"})
     }
 }
 

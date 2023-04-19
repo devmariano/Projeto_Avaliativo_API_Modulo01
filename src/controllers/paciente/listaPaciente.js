@@ -14,7 +14,7 @@ async function listaPaciente(request, response) {
 
     } catch (error) {
         return response
-        .status(400) //bad request
+        .status(500) //bad request
         .json({message: "Não foi possível processar a requisição"})
     }
 }

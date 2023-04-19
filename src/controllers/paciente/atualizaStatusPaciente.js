@@ -30,7 +30,7 @@ async function atualizaStatusPaciente(request, response) {
         
     } catch (error) {
         return response
-        .status(400)
+        .status(500)
         .json({ message: 'Não possivel processar a solicitacao' })
     }
 }

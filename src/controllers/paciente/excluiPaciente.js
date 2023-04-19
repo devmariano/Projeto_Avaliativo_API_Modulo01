@@ -20,7 +20,7 @@ async function excluiPaciente(request, response) {
 
   } catch (error) {
     response
-    .status(400)
+    .status(500)
     .json({ message: "Não foi possível processar a requisição" });
   };
 };
