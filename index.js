@@ -23,6 +23,10 @@ const listaPaciente = require("./src/controllers/paciente/listaPaciente");
 const listaTodosPacientes = require("./src/controllers/paciente/listaTodosPacientes");
 const atualizaPaciente = require("./src/controllers/paciente/atualizaPaciente");
 const atualizaStatusPaciente = require("./src/controllers/paciente/atualizaStatusPaciente");
+const excluiEnfermeiro = require("./src/controllers/enfermeiro/excluiEnfermeiro");
+const listaEnfermeiro = require("./src/controllers/enfermeiro/listaEnfermeiro");
+const listaTodosEnfermeiros = require("./src/controllers/enfermeiro/listaTodosEnfermeiros");
+const atualizaEnfermeiro = require("./src/controllers/enfermeiro/atualizaEnfermeiro");
 
 //instancia express como objeto
 const app = express()
@@ -42,6 +46,10 @@ app.post('/api/medicos', validaMedico, cadastraMedico)
 
 //ROTAS ENFERMEIROS
 app.post('/api/enfermeiros', validaEnfermeiro, cadastraEnfermeiro)
+app.delete('/api/enfermeiros/:id', excluiEnfermeiro)
+app.get('/api/enfermeiros/:id', listaEnfermeiro)
+app.get('/api/enfermeiros/', listaTodosEnfermeiros)
+app.put('/api/enfermeiros/:id', atualizaEnfermeiro)
 
 
 //verifica se conexao obteve sucesso e sincroniza os models ao BD
