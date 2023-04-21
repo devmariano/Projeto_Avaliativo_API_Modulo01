@@ -23,10 +23,17 @@ const listaPaciente = require("./src/controllers/paciente/listaPaciente");
 const listaTodosPacientes = require("./src/controllers/paciente/listaTodosPacientes");
 const atualizaPaciente = require("./src/controllers/paciente/atualizaPaciente");
 const atualizaStatusPaciente = require("./src/controllers/paciente/atualizaStatusPaciente");
+const excluiMedico = require("./src/controllers/medico/excluiMedico");
+const listaMedico = require("./src/controllers/medico/listaMedico");
+const listaTodosMedicos = require("./src/controllers/medico/listaTodosMedicos");
+const atualizaMedico = require("./src/controllers/medico/atualizaMedico");
+const atualizaStatusMedico = require("./src/controllers/medico/atualizaStatusMedico");
 const excluiEnfermeiro = require("./src/controllers/enfermeiro/excluiEnfermeiro");
 const listaEnfermeiro = require("./src/controllers/enfermeiro/listaEnfermeiro");
 const listaTodosEnfermeiros = require("./src/controllers/enfermeiro/listaTodosEnfermeiros");
 const atualizaEnfermeiro = require("./src/controllers/enfermeiro/atualizaEnfermeiro");
+const atendimento = require("./src/controllers/atendimento/atendimento");
+const listaAtendimento = require("./src/controllers/atendimento/listaAtendimento");
 
 //instancia express como objeto
 const app = express()
@@ -43,6 +50,11 @@ app.put('/api/pacientes/:id/status', atualizaStatusPaciente)
 
 //ROTAS MEDICOS
 app.post('/api/medicos', validaMedico, cadastraMedico)
+app.delete('/api/medicos/:id', excluiMedico)
+app.get('/api/medicos/:id', listaMedico)
+app.get('/api/medicos/', listaTodosMedicos)
+app.put('/api/medicos/:id', atualizaMedico)
+app.put('/api/medicos/:id/status', atualizaStatusMedico)
 
 //ROTAS ENFERMEIROS
 app.post('/api/enfermeiros', validaEnfermeiro, cadastraEnfermeiro)
@@ -50,6 +62,10 @@ app.delete('/api/enfermeiros/:id', excluiEnfermeiro)
 app.get('/api/enfermeiros/:id', listaEnfermeiro)
 app.get('/api/enfermeiros/', listaTodosEnfermeiros)
 app.put('/api/enfermeiros/:id', atualizaEnfermeiro)
+
+//ROTA ATENDIMENTO
+app.post('/api/atendimento', atendimento)
+app.get('/api/atendimento/', listaAtendimento)
 
 
 //verifica se conexao obteve sucesso e sincroniza os models ao BD
