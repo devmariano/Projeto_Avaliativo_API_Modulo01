@@ -1,4 +1,5 @@
 
+
 ![App Screenshot](https://raw.githubusercontent.com/devmariano/project_files_repo/main/labMedicine_logo2.jpg)
 # API LABMedicine 
 
@@ -72,8 +73,6 @@ Aqui você pode testar os endpoints online: <https://labmedicine-api.onrender.co
 ℹ️ disponivel até 20/07/2023 
 
 ![App Screenshot](https://raw.githubusercontent.com/devmariano/project_files_repo/main/teste_rota.jpg)
-## Documentação da API
-
 ## 🚑📗 Documentação da API
 
 ### 🚥 Endpoints - Rotas Pacientes
@@ -674,9 +673,105 @@ Não há response no body em caso de sucesso
 |  `204` | sucesso|
 |  `404` | não encontrado registro com o código informado|
 
+---
+
+### 🚥 Endpoints - Atendimentos
+#### S18- Realização de Atendimento Médico
+
+```http
+  POST /api/atendimentos
+```
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `id`      | `int` | **Autoincremental**. Chave primaria |
+| `paciente_id` | `int| **Obrigatório**. Chave estrangeira do paciente |
+| `medico_id` | `int| **Obrigatório**. Chave estrangeira do medico |
+
+
+Request JSON exemplo
+```http
+  {
+    "paciente_id":"2",
+    "medico_id":"1"
+}
+```
+
+| Response Status       | Descrição                           |
+|  :--------- | :---------------------------------- |
+|  `201` | sucesso|
+|  `400` | dados inválidos|
+|  `404` | medico ou paciente não encontrados no sistema|
+|  `500` | erro interno|
 
 ##
 
+#### S19 - Listagem de Atendimentos ⭐(funcionalidade extra)
+
+```http
+  GET /api/atendimentos
+```
+Não é necessario resquest body
+
+Opcionalmente podem ser utilizados no patch dois query params informando: medico_id ou paciente_id
+
+Exemplo query params médico:
+`/api/atendimentos?medico=1`  retorna todos atendimentos do médico especificado
+
+Exemplo query params paciente:
+`/api/atendimentos?paciente=1` retorna todos atendimentos do paciente especificado
+
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `id`      | `int` | Chave primaria |
+| `paciente_id` | `int`| **querie params não obrigatorio**. Chave estrangeira do paciente |
+| `medico_id` | `int`| **querie params não obrigatorio**. Chave estrangeira do medico |
+
+Exemplo de resposta:
+
+```http
+[
+	{
+		"id": 1,
+		"paciente_id": 13,
+		"medico_id": 1,
+		"createdAt": "2023-04-20T23:56:33.120Z",
+		"updatedAt": "2023-04-20T23:56:33.120Z",
+		"pacienteId": 13,
+		"medicoId": 1
+	},
+	{
+		"id": 2,
+		"paciente_id": 14,
+		"medico_id": 1,
+		"createdAt": "2023-04-20T23:57:25.088Z",
+		"updatedAt": "2023-04-20T23:57:25.088Z",
+		"pacienteId": 14,
+		"medicoId": 1
+	}
+]
+```
+
+| Response Status       | Descrição                           |
+|  :--------- | :---------------------------------- |
+|  `200` | sucesso|
+|  `404` | medico ou paciente não encontrados no sistema|
+|  `500` | erro interno|
+
+
+## Projeto Avaliativo do Módulo 1 :: LAB 365 
+#### Curso WEB FullStack 2023
+[LAB365 ](https://lab365.tech/) - Espaço do SENAI para desenvolver habilidades do futuro.
+![Logo](https://media.licdn.com/dms/image/C4D0BAQGcs8aDa4BZOQ/company-logo_200_200/0/1668186440015?e=1690416000&v=beta&t=YhQTfa9VLbEVw1XnROd2OsJUwGu-7Ia8eUoy18a3ve0) 
+
+
+
+
+
+## Autor
+
+- Alexandre Mariano :: [@devmariano](https://www.github.com/devmariano) 
 ![Logo](https://raw.githubusercontent.com/devmariano/project_files_repo/main/labMedicine_logo6.jpg)
 
 
