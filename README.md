@@ -773,7 +773,11 @@ Exemplo de resposta:
 
 ## Autor
 
-- Alexandre Mariano :: [@devmariano](https://www.github.com/devmariano) 
+|        |                             |
+|  :--------- | :---------------------------------- |
+|  <img src="https://avatars.githubusercontent.com/u/86934710?v=4" width="50%" height="50%"/> | Alexandre Mariano :: [@devmariano](https://www.github.com/devmariano)|
+
+###
 ![Logo](https://raw.githubusercontent.com/devmariano/project_files_repo/main/labMedicine_logo6.jpg)
 
 
