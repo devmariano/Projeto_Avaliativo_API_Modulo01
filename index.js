@@ -64,8 +64,8 @@ app.get('/api/enfermeiros/', listaTodosEnfermeiros)
 app.put('/api/enfermeiros/:id', atualizaEnfermeiro)
 
 //ROTA ATENDIMENTO
-app.post('/api/atendimento', atendimento)
-app.get('/api/atendimento/', listaAtendimento)
+app.post('/api/atendimentos', atendimento)
+app.get('/api/atendimentos', listaAtendimento)
 
 
 //verifica se conexao obteve sucesso e sincroniza os models ao BD
