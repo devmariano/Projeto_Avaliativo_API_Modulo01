@@ -762,9 +762,8 @@ Exemplo de resposta:
 
 ## Projeto Avaliativo do Módulo 1 :: LAB 365 
 #### Curso WEB FullStack 2023
-[LAB365 ](https://lab365.tech/) - Espaço do SENAI para desenvolver habilidades do futuro.
-<br>
-<img src="https://media.licdn.com/dms/image/C4D0BAQGcs8aDa4BZOQ/company-logo_200_200/0/1668186440015?e=1690416000&v=beta&t=YhQTfa9VLbEVw1XnROd2OsJUwGu-7Ia8eUoy18a3ve0" width="10%" height="10%"/>
+
+<img src="https://media.licdn.com/dms/image/C4D0BAQGcs8aDa4BZOQ/company-logo_200_200/0/1668186440015?e=1690416000&v=beta&t=YhQTfa9VLbEVw1XnROd2OsJUwGu-7Ia8eUoy18a3ve0" width="10%" height="10%"/> [LAB365 ](https://lab365.tech/) - Espaço do SENAI para desenvolver habilidades do futuro.
 
 
 
@@ -772,7 +771,6 @@ Exemplo de resposta:
 ## Autor
 
 - Alexandre Mariano :: [@devmariano](https://www.github.com/devmariano) 
-<br>
 ![Logo](https://raw.githubusercontent.com/devmariano/project_files_repo/main/labMedicine_logo6.jpg)
 
 
