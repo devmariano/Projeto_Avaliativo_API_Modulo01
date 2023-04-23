@@ -41,7 +41,7 @@ Acesse a documentação do modelo: https://dbdocs.io/alexandre_mariano1/labmedic
 
 ### Organização de etapas e cronograma
 
-Notion: https://www.notion.so/Projeto-Avaliativo-Modulo-01-00f2823f3dba45e3971502b7d22d5f50
+Acesse no [NOTION](https://tough-shoe-442.notion.site/Projeto-Avaliativo-Modulo-01-00f2823f3dba45e3971502b7d22d5f50)
 
 
 ## 🚀 Como executar o projeto
