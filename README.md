@@ -10,7 +10,11 @@ O Projeto LABMedicine consiste em uma API para gestão hospitalar que permite o 
 
 Projeto foi desenvolvido utilizando a linguagem javascript com Node.js framework e banco de dados PostgreSQL. 
 
+### Vídeo de apresentação: 
+https://drive.google.com/file/d/1TgatvSkL_zVhRnYMggKyW_LDfgEGhQm4/view?usp=share_link
+
 Seguem abaixo as depêndencias externas utilizadas:
+
 
 | Plugin | Uso |
 | ------ | ------ |
